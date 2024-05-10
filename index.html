@@ -7,20 +7,28 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div id="container">
-      <div id="seven" class="button">7</div>
-      <div id="eight" class="button">8</div>
-      <div id="nine" class="button">9</div>
-      <div id="add" class="button">+</div>
-      <div id="four" class="button">4</div>
-      <div id="five" class="button">5</div>
-      <div id="six" class="button">6</div>
-      <div id="subtract" class="button">-</div>
-      <div id="one" class="button">1</div>
-      <div id="two" class="button">2</div>
-      <div id="three" class="button">3</div>
-      <div id="multiply" class="button">x</div>
-      <div id="equals" class="button">=</div>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="result" disabled />
+      </div>
+      <div class="buttons">
+        <button class="operator" id="clear">C</button>
+        <button class="operator" id="divide">/</button>
+        <button class="operator" id="multiply">*</button>
+        <button class="operator" id="subtract">-</button>
+        <button class="number" id="seven">7</button>
+        <button class="number" id="eight">8</button>
+        <button class="number" id="nine">9</button>
+        <button class="operator" id="add">+</button>
+        <button class="number" id="four">4</button>
+        <button class="number" id="five">5</button>
+        <button class="number" id="six">6</button>
+        <button class="number" id="one">1</button>
+        <button class="number" id="two">2</button>
+        <button class="number" id="three">3</button>
+        <button class="number" id="zero">0</button>
+        <button class="operator" id="equals">=</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
