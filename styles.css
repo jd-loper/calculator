@@ -1,0 +1,17 @@
+#container {
+  border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  margin: auto;
+  flex-basis: calc(25% - 10px);
+  height: calc(25% - 10px);
+}
