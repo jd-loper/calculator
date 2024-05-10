@@ -1,30 +1,25 @@
 let operand1;
 let operator;
 let operand2;
+let display = document.getElementById("result");
 
-let buttons = document.querySelectorAll(".button");
+let buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
-  button.addEventListener("mousedown", () => {
-    button.style.backgroundColor = "gray";
-  });
-
-  button.addEventListener("mouseup", () => {
-    button.style.backgroundColor = "white";
-  });
-
   button.addEventListener("click", () => {
     if (!isNaN(button.textContent)) {
       operand1 = (operand1 || "") + button.textContent;
+      display.value = button.textContent;
     } else if (
       button.textContent === "+" ||
       button.textContent === "-" ||
-      button.textContent === "x" ||
+      button.textContent === "*" ||
       button.textContent === "/"
     ) {
       operator = button.textContent;
       operand2 = operand1;
       operand1 = "";
+      display.value = button.textContent;
     } else if (button.textContent === "=") {
       let result = operate(
         operator,
@@ -32,6 +27,7 @@ buttons.forEach((button) => {
         parseFloat(operand1)
       );
       console.log(result);
+      display.value = result;
       operand1 = result;
       operand2 = null;
       operator = null;
@@ -61,9 +57,11 @@ function operate(operator, operand1, operand2) {
       return add(operand1, operand2);
     case "-":
       return subtract(operand1, operand2);
-    case "x":
+    case "*":
       return multiply(operand1, operand2);
     case "/":
       return divide(operand1, operand2);
+    default:
+      return 0;
   }
 }
