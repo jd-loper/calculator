@@ -9,7 +9,7 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     if (!isNaN(button.textContent)) {
       operand1 = (operand1 || "") + button.textContent;
-      display.value = button.textContent;
+      display.value = operand1;
     } else if (
       button.textContent === "+" ||
       button.textContent === "-" ||
