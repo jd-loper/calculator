@@ -31,6 +31,8 @@ buttons.forEach((button) => {
       operand1 = result;
       operand2 = null;
       operator = null;
+    } else if (button.textContent === "C") {
+      clearBtn();
     }
   });
 });
@@ -64,4 +66,11 @@ function operate(operator, operand1, operand2) {
     default:
       return 0;
   }
+}
+
+function clearBtn() {
+  operand1 = null;
+  operand2 = null;
+  operator = null;
+  display.value = "";
 }
