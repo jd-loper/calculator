@@ -26,12 +26,12 @@ buttons.forEach((button) => {
       operand1 = "";
       display.value = button.textContent;
     } else if (button.textContent === "=") {
-      let result = operate(
-        operator,
-        parseFloat(operand2),
-        parseFloat(operand1)
-      );
-      console.log(result);
+      let result;
+      if (operator && operand2) {
+        result = operate(operator, parseFloat(operand2), parseFloat(operand1));
+      } else {
+        result = parseFloat(operand1);
+      }
       display.value = result;
       operand1 = result;
       operand2 = null;
