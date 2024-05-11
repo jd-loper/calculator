@@ -10,6 +10,11 @@ buttons.forEach((button) => {
     if (!isNaN(button.textContent)) {
       operand1 = (operand1 || "") + button.textContent;
       display.value = operand1;
+    } else if (button.textContent === ".") {
+      if (!operand1.includes(".")) {
+        operand1 = (operand1 || "") + button.textContent;
+        display.value = operand1;
+      }
     } else if (
       button.textContent === "+" ||
       button.textContent === "-" ||
