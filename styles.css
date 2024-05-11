@@ -15,6 +15,7 @@ body {
 .calculator {
   width: 300px;
   border: 1px solid #000;
+  border-radius: 5px;
   padding: 5px;
   background-color: #4682b4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -39,6 +40,7 @@ button {
   font-size: 18px;
   padding: 10px;
   border: 1px solid #000;
+  border-radius: 5px;
   background-color: #f0f0f0;
   cursor: pointer;
 }
